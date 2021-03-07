@@ -42,10 +42,8 @@ const skillsSection = {
     emoji(
       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Transform features into code"),
+    emoji("⚡ CI/CD with third part services like Azure DevOps")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -122,32 +120,34 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Senior Front end developer",
+      role: "Senior Front-End developer",
       company: "Avanade",
       companylogo: require("./assets/images/avanadeLogo.png"),
-      date: "June 2018 – Present",
-      desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      date: "December 2020 – Present",
+      desc: "React developer / Front-End developer",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Implementing client’s features in web and mobile applications with an eye to the UI and the UX",
+        "Technologies: React, Sass, Javascript, Redux, Thunk, Jest"
       ]
     },
     {
       role: "Front-End Developer",
       company: "Aesys",
       companylogo: require("./assets/images/aesysLogo.png"),
-      date: "May 2017 – May 2018",
+      date: "March 2019 – November 2020",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "Web and mobile front-end developer, specialized in the React ecosystem and Javascript language",
+      descBullets: [
+        "Technologies: React Native, React, Sass, Javascript, Redux"
+      ]
     },
     {
       role: "Front-End Developer",
       company: "ThinkOpen",
       companylogo: require("./assets/images/thinkopenLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      date: "July 2018 – February 2019",
+      desc: "Front-End and React Native developer",
+      descBullets: ["Technologies: React Native, Javascript, RxJs"]
     }
   ]
 };
