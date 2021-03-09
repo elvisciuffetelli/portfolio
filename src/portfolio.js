@@ -4,16 +4,18 @@
 
 import emoji from "react-easy-emoji";
 
-const illustration = {
-  animated: true // set to false to use static SVG
+const animatedIllustrations = {
+  greeting: true, // set to false to use static SVG
+  skills: true, // set to false to use static SVG
+  contact: false // set to false to use static SVG
 };
 
 const greeting = {
   username: "Elvis Ciuffetelli",
-  title: "Hi all, I'm Elvis",
-  subTitle: emoji(
-    "A passionate Software Developer from Italy 🇮🇹 I build Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and other cool libraries and frameworks."
-  ),
+  title: "Hi all, my name is Elvis Ciuffetelli",
+  subTitle: emoji("A passionate Software Developer from Italy 🇮🇹"),
+  body:
+    "I build Web and Mobile applications with JavaScript | React.js | Node.js | React Native and other cool libraries and frameworks.",
   resumeLink:
     "https://drive.google.com/file/d/1Oulvd6urZJrQ6Ilmmz3c_HJ6ukWNm1HD/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -93,7 +95,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Università dell'Aquila",
-      logo: require("./assets/images/harvardLogo.png"),
+      //logo: require("./assets/images/harvardLogo.png"),
       subHeader: "Computer Science",
       duration: "September 2017 - April 2019",
       desc: "Participated in the research of XXX and published 3 papers.",
@@ -339,7 +341,7 @@ const twitterDetails = {
 };
 
 export {
-  illustration,
+  animatedIllustrations,
   greeting,
   socialMediaLinks,
   skillsSection,

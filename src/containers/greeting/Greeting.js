@@ -7,7 +7,7 @@ import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 
-import {illustration, greeting} from "../../portfolio";
+import {animatedIllustrations, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
@@ -28,14 +28,21 @@ export default function Greeting() {
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
-              <p
+              <h2
                 className={
                   isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
+                    ? "dark-mode greeting-text-sub"
+                    : "greeting-text-sub subTitle"
                 }
               >
                 {greeting.subTitle}
+              </h2>
+              <p
+                className={
+                  isDark ? "dark-mode greeting-text-p" : "greeting-text-p body"
+                }
+              >
+                {greeting.body}
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
@@ -49,12 +56,12 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
+            {animatedIllustrations.greeting ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
                 alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
+                src={require("../../assets/images/codeThinking.svg")}
               ></img>
             )}
           </div>
