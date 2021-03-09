@@ -33,14 +33,19 @@
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1.1;
   color: black !important;
 }
 
-.greeting-text-p {
+.greeting-text-sub {
   font-size: 30px;
   line-height: 40px;
+}
+
+.greeting-text-p {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .greeting-image-div > img {
@@ -83,10 +88,13 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 45px;
+  }
+  .greeting-text-sub {
+    font-size: 20px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 768px) {
@@ -94,11 +102,16 @@
     justify-content: space-around;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 26px;
+    text-align: center;
+  }
+  .greeting-text-sub {
+    font-size: 16px;
+    line-height: normal;
     text-align: center;
   }
   .greeting-text-p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
     text-align: center;
   }
