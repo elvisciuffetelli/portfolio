@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "600c963e0de7788264913ca0ce47b90e",
+    "revision": "29760994ff4f7a3ed8f1fb44f7563e6a",
     "url": "/index.html"
   },
   {
-    "revision": "7fe5e8ebb095c1c8be80",
+    "revision": "310ac2fb97e2ed584d54",
     "url": "/static/css/3.00373544.chunk.css"
   },
   {
-    "revision": "5ba7bbb0e7423ac372af",
+    "revision": "d59a0910004977e59372",
     "url": "/static/css/4.3e7d09e6.chunk.css"
   },
   {
-    "revision": "49437f08ddbc4d3105e9",
-    "url": "/static/css/main.db7bd74d.chunk.css"
+    "revision": "9f84d68d7f981afb9527",
+    "url": "/static/css/main.2ba60ca4.chunk.css"
   },
   {
-    "revision": "b646d9fa50b10d7e5d68",
-    "url": "/static/js/2.3a919fe2.chunk.js"
+    "revision": "3c6a3ba5a177c1a666fc",
+    "url": "/static/js/2.c65c8c9c.chunk.js"
   },
   {
     "revision": "6e1d2efc12a1ac972ff1f942df7eb0bd",
-    "url": "/static/js/2.3a919fe2.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c65c8c9c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7fe5e8ebb095c1c8be80",
-    "url": "/static/js/3.8450745a.chunk.js"
+    "revision": "310ac2fb97e2ed584d54",
+    "url": "/static/js/3.bfe2bed6.chunk.js"
   },
   {
-    "revision": "5ba7bbb0e7423ac372af",
-    "url": "/static/js/4.9a7e9aef.chunk.js"
+    "revision": "d59a0910004977e59372",
+    "url": "/static/js/4.7597e091.chunk.js"
   },
   {
-    "revision": "49437f08ddbc4d3105e9",
-    "url": "/static/js/main.501a2ddf.chunk.js"
+    "revision": "9f84d68d7f981afb9527",
+    "url": "/static/js/main.c50e57b7.chunk.js"
   },
   {
-    "revision": "9b84a49d4c5d400c7a8b",
-    "url": "/static/js/runtime-main.7d7a4348.js"
+    "revision": "9eb7737b17a27343822d",
+    "url": "/static/js/runtime-main.7013954c.js"
   },
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
@@ -56,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/aesysLogo.e281c834.png"
   },
   {
+    "revision": "3ac2142be352c4c0684e1aa75a2a4af6",
+    "url": "/static/media/appWebMobile.3ac2142b.svg"
+  },
+  {
     "revision": "481db3f6fbe47ae91308c9f56bfadfad",
     "url": "/static/media/avanadeLogo.481db3f6.png"
   },
@@ -64,20 +68,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/codeInLogo.47a7a717.webp"
   },
   {
+    "revision": "7f9a1186f7941afe3e8d0edbbcd3444c",
+    "url": "/static/media/codeThinking.7f9a1186.svg"
+  },
+  {
     "revision": "51cf7192327488da3d2a171280680c16",
     "url": "/static/media/contactMailDark.51cf7192.svg"
   },
   {
-    "revision": "59389695208d7454c6607bed51ed4316",
-    "url": "/static/media/developerActivity.59389695.svg"
-  },
-  {
     "revision": "e79c639294c805688be731921368c8f8",
     "url": "/static/media/googleAssistantLogo.e79c6392.webp"
-  },
-  {
-    "revision": "35ef5e915631be2c31ccdff55b53db29",
-    "url": "/static/media/harvardLogo.35ef5e91.png"
   },
   {
     "revision": "368dca84c786e3e126e9337b66e41326",
@@ -86,10 +86,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5cc53be040fd37f99ff0447eb4484a33",
     "url": "/static/media/logo-eni.5cc53be0.webp"
-  },
-  {
-    "revision": "52be31441c8cf8a8a16bd7a228d428bf",
-    "url": "/static/media/manOnTable.52be3144.svg"
   },
   {
     "revision": "ee62cb58630f29a6e6201b49d4c03728",
