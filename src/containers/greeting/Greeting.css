@@ -91,7 +91,7 @@
     font-size: 45px;
   }
   .greeting-text-sub {
-    font-size: 20px;
+    font-size: 24px;
   }
   .greeting-text-p {
     font-size: 18px;
@@ -102,16 +102,16 @@
     justify-content: space-around;
   }
   .greeting-text {
-    font-size: 26px;
+    font-size: 28px;
     text-align: center;
   }
   .greeting-text-sub {
-    font-size: 16px;
+    font-size: 20px;
     line-height: normal;
     text-align: center;
   }
   .greeting-text-p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
     text-align: center;
   }
