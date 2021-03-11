@@ -274,7 +274,8 @@ const achievementSection = {
 
 const blogSection = {
   title: "Blogs",
-  subtitle: "I love to write and teach others what I have learnt.",
+  subtitle:
+    "Some articles I wrote to clarify concepts to me and to other people.",
 
   blogs: [
     /*   {
@@ -286,12 +287,13 @@ const blogSection = {
     }, */
     {
       url:
-        "https://elvisciuffetelli.medium.com/il-ruolo-del-caso-nella-nostra-vita-cd54e02a99ca",
-      title: "About Black Swans",
-      description: "A thought about a topic I am very much interested"
+        "https://elvisciuffetelli.medium.com/javascript-event-loop-6e882fe95587",
+      title: "Javascript Event Loop",
+      description:
+        "Understanding one of the most important topics about JavaScript"
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
