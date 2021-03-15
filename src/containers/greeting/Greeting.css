@@ -123,13 +123,18 @@
   .greeting-main {
     display: block;
   }
-  .greeting-image-div {
-    height: 256px;
+}
+
+@media (max-width: 360px) {
+  .main {
+    width: auto;
+    margin-top: 0;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .main {
     width: auto;
+    margin-top: 2rem;
   }
 }
