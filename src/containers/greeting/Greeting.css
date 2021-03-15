@@ -48,6 +48,11 @@
   line-height: 32px;
 }
 
+.greeting-image-div {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;

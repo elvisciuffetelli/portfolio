@@ -5,8 +5,8 @@
 import emoji from "react-easy-emoji";
 
 const animatedIllustrations = {
-  greeting: true, // set to false to use static SVG
-  skills: true, // set to false to use static SVG
+  greeting: false, // set to false to use static SVG
+  skills: false, // set to false to use static SVG
   contact: false // set to false to use static SVG
 };
 

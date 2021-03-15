@@ -43,6 +43,10 @@
   margin-top: 4rem;
 }
 
+.contact-image-div {
+  padding: 2rem;
+}
+
 .contact-image-div > img {
   max-width: 100%;
   height: auto;
