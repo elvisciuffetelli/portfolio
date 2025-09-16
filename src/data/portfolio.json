@@ -1,0 +1,133 @@
+{
+  "workExperience": [
+    {
+      "title": "Software Engineer",
+      "company": "Wellhub",
+      "startDate": "June 2023",
+      "endDate": "Present",
+      "note": "Initially joined Fitprime, which was acquired by Wellhub in December 2024",
+      "logo": "/logos/fitprime_logo.jpeg"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Easylivery",
+      "startDate": "November 2022",
+      "endDate": "June 2023",
+      "logo": "/logos/easylivery_logo.jpeg"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Cazoo",
+      "startDate": "October 2021",
+      "endDate": "December 2022",
+      "note": "Initially joined Brumbrum, which was acquired by Cazoo in June 2022",
+      "logo": "/logos/cazoo_logo.jpeg"
+    },
+    {
+      "title": "Senior Analyst",
+      "company": "Avanade",
+      "startDate": "December 2020",
+      "endDate": "October 2021",
+      "project": "Project with Tetrapak",
+      "logo": "/logos/avanade_logo.jpeg"
+    },
+    {
+      "title": "Front end developer",
+      "company": "Aesys",
+      "startDate": "March 2019",
+      "endDate": "December 2020",
+      "logo": "/logos/aesys_srl_logo.jpeg"
+    },
+    {
+      "title": "React - React Native front-end developer",
+      "company": "ThinkOpen",
+      "startDate": "July 2018",
+      "endDate": "March 2019",
+      "note": "Mainly worked with Reply on a project for ENI",
+      "logo": "/logos/reply_logo.jpeg"
+    },
+    {
+      "title": "Web Developer",
+      "company": "Catena Media, Malta",
+      "startDate": "October 2017",
+      "endDate": "April 2018",
+      "logo": "/logos/catenmedia_logo.jpeg"
+    },
+    {
+      "title": "Web Developer",
+      "company": "IMA sas, L'Aquila",
+      "startDate": "February 2015",
+      "endDate": "May 2017"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Università degli Studi dell'Aquila",
+      "status": "Present"
+    },
+    {
+      "institution": "ESL Malta",
+      "course": "English course level Advanced (C1)",
+      "startDate": "January 2017",
+      "endDate": "Present"
+    }
+  ],
+  "skills": [
+    "React",
+    "Node.js",
+    "HTML & CSS",
+    "MongoDB",
+    "Git",
+    "JavaScript",
+    "Typescript",
+    "NextJS",
+    "Supabase",
+    "Tailwind",
+    "React Native",
+    "Cypress"
+  ],
+  "languages": [
+    "Italiano",
+    "Inglese"
+  ],
+  "extraCurricular": [
+    {
+      "role": "Hospitality",
+      "organization": "Glanleam Knight's of Kerry Historical Garden, Ireland",
+      "startDate": "January 2017",
+      "endDate": "March 2017",
+      "description": "Helped take care of the Historical Knight's of Kerry Garden, met people from all over the world and visited Ireland."
+    },
+    {
+      "role": "Sviluppatore front-end",
+      "organization": "Informatici Senza Frontiere APS",
+      "startDate": "March 2021",
+      "endDate": "Present",
+      "description": "Contributor to the Open Hospital project"
+    }
+  ],
+  "projects": [
+    {
+      "name": "TracciaPesi",
+      "description": "Web app for tracking workouts and monitoring gym progress. Features include custom exercise logging, visual progress charts, and a clean, mobile-first interface.",
+      "liveUrl": "https://www.tracciapesi.app/"
+    },
+    {
+      "name": "BeviConta",
+      "description": "Alcohol tracking app designed to promote awareness of drinking habits. Features intuitive logging and insights to help users maintain healthy alcohol consumption patterns.",
+      "liveUrl": "https://www.beviconta.com/"
+    },
+    {
+      "name": "Recurringly", 
+      "description": "Subscription and recurring expense management app with intelligent notification system. Track, monitor, and get alerts for all your recurring payments and subscriptions.",
+      "liveUrl": "https://recurringly.vercel.app/"
+    }
+  ],
+  "links": {
+    "email": "ciuffetellielvis@gmail.com",
+    "linkedin": "https://linkedin.com/in/elvis-ciuffetelli",
+    "github": "https://github.com/elvisciuffetelli",
+    "cvDownload": "/Elvis_Ciuffetelli_CV.pdf"
+  },
+  "location": "L'Aquila, Italy"
+}

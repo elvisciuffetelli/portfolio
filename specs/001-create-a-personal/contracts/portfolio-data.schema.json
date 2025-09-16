@@ -1,0 +1,193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Portfolio Data Schema",
+  "description": "Schema for portfolio website data structure",
+  "required": ["workExperience", "education", "skills", "languages", "projects", "extraCurricular", "links", "location"],
+  "properties": {
+    "workExperience": {
+      "type": "array",
+      "description": "Array of work experience entries",
+      "items": {
+        "type": "object",
+        "required": ["title", "company", "startDate", "endDate"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Job title or role"
+          },
+          "company": {
+            "type": "string",
+            "description": "Company name"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "Employment start date"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "Employment end date or 'Present'"
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional note about the position"
+          },
+          "project": {
+            "type": "string",
+            "description": "Optional project information"
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Array of education entries",
+      "items": {
+        "type": "object",
+        "required": ["institution"],
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "Educational institution name"
+          },
+          "course": {
+            "type": "string",
+            "description": "Course or program name"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "Education start date"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "Education end date"
+          },
+          "status": {
+            "type": "string",
+            "description": "Current status (e.g., 'Present')"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "Array of technical skills",
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "Array of spoken languages",
+      "items": {
+        "type": "string"
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Array of personal/professional projects",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Project name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Project description and goals"
+          },
+          "technologies": {
+            "type": "array",
+            "description": "Technologies used in the project",
+            "items": {
+              "type": "string"
+            }
+          },
+          "githubUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "GitHub repository URL"
+          },
+          "liveUrl": {
+            "type": "string",
+            "format": "uri", 
+            "description": "Live project URL"
+          },
+          "imageUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "Project image URL"
+          }
+        }
+      }
+    },
+    "extraCurricular": {
+      "type": "array",
+      "description": "Array of extra-curricular activities",
+      "items": {
+        "type": "object",
+        "required": ["role", "organization", "description"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "Role in the activity"
+          },
+          "organization": {
+            "type": "string",
+            "description": "Organization name"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "Activity start date"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "Activity end date"
+          },
+          "description": {
+            "type": "string",
+            "description": "Activity description"
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "description": "Contact and social links",
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Primary email address"
+        },
+        "linkedin": {
+          "type": "string",
+          "format": "uri",
+          "description": "LinkedIn profile URL"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub profile URL"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "description": "Personal website URL"
+        },
+        "cvDownload": {
+          "type": "string",
+          "format": "uri",
+          "description": "CV download link"
+        }
+      }
+    },
+    "location": {
+      "type": "string",
+      "description": "Geographic location"
+    }
+  }
+}
