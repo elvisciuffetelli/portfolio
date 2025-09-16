@@ -64,7 +64,7 @@ export function isExternalUrl(url: string): boolean {
 /**
  * Sanitize and validate portfolio data at runtime
  */
-export function validatePortfolioData(data: any): data is PortfolioData {
+export function validatePortfolioData(data: unknown): data is PortfolioData {
   if (!data || typeof data !== 'object') return false;
   
   const required = [
