@@ -1,3 +1,5 @@
+'use client';
+
 import { ContactButton } from '@/components/ui/ContactButton';
 import Image from 'next/image';
 import type { HeroSectionProps } from '@/types/portfolio';
@@ -19,7 +21,7 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
         <div className="space-y-8">
           {/* Profile Picture */}
           <div className="flex justify-center">
-            <div className="w-32 h-32 relative animate-float">
+            <div className="w-32 h-32 relative">
               <Image
                 src="/profilepic.jpg"
                 alt="Elvis Ciuffetelli"
@@ -103,9 +105,23 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
 
           {/* Scroll indicator */}
           <div className="pt-16 animate-bounce">
-            <div className="w-6 h-10 border-2 border-blue-400 dark:border-blue-500 rounded-full mx-auto relative cursor-pointer hover:border-blue-600 dark:hover:border-blue-300 transition-colors">
+            <button
+              onClick={() => {
+                const aboutSection = document.querySelector('#about') as HTMLElement;
+                if (aboutSection) {
+                  const navbarHeight = 72;
+                  const elementPosition = aboutSection.offsetTop - navbarHeight;
+                  window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="w-6 h-10 border-2 border-blue-400 dark:border-blue-500 rounded-full mx-auto relative cursor-pointer hover:border-blue-600 dark:hover:border-blue-300 transition-colors hover:scale-110 transform duration-200"
+              aria-label="Scroll to About section"
+            >
               <div className="w-1 h-3 bg-blue-400 dark:bg-blue-500 rounded-full absolute top-2 left-1/2 transform -translate-x-1/2 animate-pulse-slow"></div>
-            </div>
+            </button>
           </div>
         </div>
       </div>

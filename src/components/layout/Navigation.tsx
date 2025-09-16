@@ -30,7 +30,7 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
     const element = document.querySelector(href);
     if (element) {
       const navbarHeight = 72; // 64px navbar + 8px extra padding
-      const elementPosition = element.offsetTop - navbarHeight;
+      const elementPosition = element.offsetTop;
       window.scrollTo({ 
         top: elementPosition, 
         behavior: 'smooth' 
