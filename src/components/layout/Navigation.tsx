@@ -27,13 +27,13 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
       return;
     }
 
-    const element = document.querySelector(href);
+    const element = document.querySelector(href) as HTMLElement;
     if (element) {
-      const navbarHeight = 72; // 64px navbar + 8px extra padding
+      //const navbarHeight = 72; // 64px navbar + 8px extra padding
       const elementPosition = element.offsetTop;
-      window.scrollTo({ 
-        top: elementPosition, 
-        behavior: 'smooth' 
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
       });
     }
   };
