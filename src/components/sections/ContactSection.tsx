@@ -1,4 +1,3 @@
-import { Section } from '@/components/layout/Section';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { Separator } from '@/components/ui/separator';
 import { MapPin } from 'lucide-react';
