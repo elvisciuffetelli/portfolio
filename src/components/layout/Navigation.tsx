@@ -48,11 +48,12 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
             className={cn(
               'text-xl font-bold',
               'text-gray-900 dark:text-gray-100',
-              'hover:text-gray-600 dark:hover:text-gray-300',
-              'transition-colors'
+              'hover:text-blue-600 dark:hover:text-blue-400',
+              'transition-colors cursor-pointer',
+              'font-mono tracking-wide'
             )}
           >
-            Elvis Ciuffetelli
+            &lt;EC /&gt;
           </button>
 
           {/* Desktop Navigation */}
@@ -65,7 +66,7 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
                   'text-sm font-medium',
                   'text-gray-700 dark:text-gray-300',
                   'hover:text-gray-900 dark:hover:text-gray-100',
-                  'transition-colors duration-200'
+                  'transition-colors duration-200 cursor-pointer'
                 )}
               >
                 {section.label}
@@ -102,7 +103,7 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
                     'text-gray-700 dark:text-gray-300',
                     'hover:text-gray-900 dark:hover:text-gray-100',
                     'hover:bg-gray-50 dark:hover:bg-gray-800',
-                    'rounded-md transition-colors duration-200'
+                    'rounded-md transition-colors duration-200 cursor-pointer'
                   )}
                 >
                   {section.label}
