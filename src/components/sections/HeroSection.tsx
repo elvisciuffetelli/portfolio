@@ -109,8 +109,8 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
               onClick={() => {
                 const aboutSection = document.querySelector('#about') as HTMLElement;
                 if (aboutSection) {
-                  const navbarHeight = 72;
-                  const elementPosition = aboutSection.offsetTop - navbarHeight;
+
+                  const elementPosition = aboutSection.offsetTop;
                   window.scrollTo({
                     top: elementPosition,
                     behavior: 'smooth'
