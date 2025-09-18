@@ -110,17 +110,17 @@
     {
       "name": "TracciaPesi",
       "description": "Web app for tracking workouts and monitoring gym progress. Features include custom exercise logging, visual progress charts, and a clean, mobile-first interface.",
-      "liveUrl": "https://www.tracciapesi.app/"
+      "liveUrl": "https://tracciapesi.eciuff.app/"
     },
     {
       "name": "BeviConta",
       "description": "Alcohol tracking app designed to promote awareness of drinking habits. Features intuitive logging and insights to help users maintain healthy alcohol consumption patterns.",
-      "liveUrl": "https://www.beviconta.com/"
+      "liveUrl": "https://beviconta.eciuff.com/"
     },
     {
       "name": "Recurringly", 
       "description": "Subscription and recurring expense management app with intelligent notification system. Track, monitor, and get alerts for all your recurring payments and subscriptions.",
-      "liveUrl": "https://recurringly.vercel.app/"
+      "liveUrl": "https://recurringly.eciuff.com/"
     }
   ],
   "links": {
