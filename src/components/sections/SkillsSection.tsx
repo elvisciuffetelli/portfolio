@@ -26,8 +26,8 @@ export function SkillsSection({ skills, groupByCategory = false }: SkillsSection
                 {category}
               </h3>
               <div className="flex flex-wrap gap-3 justify-center">
-                {categorySkills.map((skill) => (
-                  <SkillBadge key={skill} skill={skill} />
+                {categorySkills.map((skill, index) => (
+                  <SkillBadge key={skill} skill={skill} index={index} />
                 ))}
               </div>
             </div>
@@ -40,8 +40,8 @@ export function SkillsSection({ skills, groupByCategory = false }: SkillsSection
   return (
     <Section id="skills" title="Skills & Technologies">
       <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
-        {skills.map((skill) => (
-          <SkillBadge key={skill} skill={skill} />
+        {skills.map((skill, index) => (
+          <SkillBadge key={skill} skill={skill} index={index} />
         ))}
       </div>
     </Section>

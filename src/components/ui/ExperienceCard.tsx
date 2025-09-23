@@ -12,10 +12,10 @@ export function ExperienceCard({ experience, isLast = false }: WorkExperienceCar
       {!isLast && (
         <div className="absolute left-4 top-12 bottom-0 w-px bg-gray-200 dark:bg-gray-700" />
       )}
-      
+
       {/* Timeline dot */}
       <div className="absolute left-2.5 top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white dark:border-gray-900" />
-      
+
       {/* Card */}
       <div className="ml-12">
         <Card className="shadow-sm hover:shadow-md transition-shadow">
@@ -46,7 +46,7 @@ export function ExperienceCard({ experience, isLast = false }: WorkExperienceCar
               </div>
             </div>
           </CardHeader>
-          
+
           {(experience.note || experience.project) && (
             <CardContent className="pt-0">
               {experience.note && (

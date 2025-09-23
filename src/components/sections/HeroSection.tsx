@@ -24,7 +24,7 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
             <div className="w-32 h-32 relative">
               <Image
                 src="/profilepic.jpg"
-                alt="Elvis Ciuffetelli"
+                alt="Elvis Ciuffetelli - Frontend Developer, professional headshot"
                 fill
                 className="object-cover rounded-full border-4 border-white dark:border-gray-700 shadow-2xl ring-4 ring-blue-100 dark:ring-blue-900"
                 priority

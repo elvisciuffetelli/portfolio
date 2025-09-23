@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { cn } from '@/utils/cn';
 import type { NavigationProps } from '@/types/portfolio';
 
 const defaultSections = [
@@ -57,37 +58,44 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {sections.map(section => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.href)}
-                className={cn(
-                  'text-sm font-medium',
-                  'text-gray-700 dark:text-gray-300',
-                  'hover:text-gray-900 dark:hover:text-gray-100',
-                  'transition-colors duration-200 cursor-pointer'
-                )}
-              >
-                {section.label}
-              </button>
-            ))}
+          <div className="hidden md:flex items-center space-x-6">
+            <div className="flex items-center space-x-6">
+              {sections.map(section => (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.href)}
+                  className={cn(
+                    'text-sm font-medium',
+                    'text-gray-700 dark:text-gray-300',
+                    'hover:text-gray-900 dark:hover:text-gray-100',
+                    'transition-colors duration-200 cursor-pointer'
+                  )}
+                >
+                  {section.label}
+                </button>
+              ))}
+            </div>
+            <div className="border-l border-gray-200 dark:border-gray-700 pl-6">
+              <ThemeToggle variant="icon" />
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle navigation menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </Button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle variant="icon" />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
