@@ -15,13 +15,10 @@
 ## 📱 User Experience
 
 - [x] Add "back to top" button
-- [ ] Create 404 and error pages
-- [ ] Add accessibility improvements (focus management, screen reader support)
+- [x] Add accessibility improvements (focus management, screen reader support)
 
 ## 📊 Analytics & Performance
 
-- [ ] Add performance monitoring
-- [ ] Implement Google Analytics or privacy-friendly alternative
 - [x] Create sitemap and robots.txt
 
 ---

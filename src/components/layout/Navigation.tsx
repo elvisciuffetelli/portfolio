@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { Breadcrumb } from '@/components/ui/Breadcrumb';
-import { useActiveSection } from '@/hooks/useActiveSection';
 import { cn } from '@/utils/cn';
 import type { NavigationProps } from '@/types/portfolio';
 
@@ -21,7 +19,6 @@ const defaultSections = [
 
 export function Navigation({ sections = defaultSections }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const activeSection = useActiveSection();
 
   const scrollToSection = (href: string) => {
     setIsMobileMenuOpen(false);
@@ -42,23 +39,13 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
     }
   };
 
-  const getBreadcrumbItems = () => {
-    if (!activeSection) return [];
-
-    const currentSection = sections.find(section => section.id === activeSection);
-    if (!currentSection) return [];
-
-    return [
-      {
-        label: currentSection.label.replace(/[^\w\s]/gi, '').trim(), // Remove emojis
-        href: currentSection.href,
-        current: true
-      }
-    ];
-  };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav
+      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Home */}
@@ -70,15 +57,17 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
               'hover:text-blue-600 dark:hover:text-blue-400',
               'transition-colors cursor-pointer',
               'font-mono tracking-wide',
-              'flex-shrink-0'
+              'flex-shrink-0',
+              'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-1'
             )}
+            aria-label="Go to top of page - Elvis Ciuffetelli Portfolio"
           >
             &lt;EC /&gt;
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6" role="menubar" aria-label="Site sections">
               {sections.map(section => (
                 <button
                   key={section.id}
@@ -87,8 +76,11 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
                     'text-sm font-medium',
                     'text-gray-700 dark:text-gray-300',
                     'hover:text-gray-900 dark:hover:text-gray-100',
-                    'transition-colors duration-200 cursor-pointer'
+                    'transition-colors duration-200 cursor-pointer',
+                    'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-2 py-1'
                   )}
+                  role="menuitem"
+                  aria-label={`Navigate to ${section.label.replace(/[^\w\s]/gi, '').trim()} section`}
                 >
                   {section.label}
                 </button>
@@ -106,12 +98,15 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle navigation menu"
+              aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-haspopup="true"
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5" aria-hidden="true" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5" aria-hidden="true" />
               )}
             </Button>
           </div>
@@ -119,8 +114,8 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700">
+          <div className="md:hidden" id="mobile-navigation">
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700" role="menu" aria-label="Mobile navigation menu">
               {sections.map(section => (
                 <button
                   key={section.id}
@@ -130,8 +125,11 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
                     'text-gray-700 dark:text-gray-300',
                     'hover:text-gray-900 dark:hover:text-gray-100',
                     'hover:bg-gray-50 dark:hover:bg-gray-800',
-                    'rounded-md transition-colors duration-200 cursor-pointer'
+                    'rounded-md transition-colors duration-200 cursor-pointer',
+                    'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
                   )}
+                  role="menuitem"
+                  aria-label={`Navigate to ${section.label.replace(/[^\w\s]/gi, '').trim()} section`}
                 >
                   {section.label}
                 </button>
@@ -140,12 +138,6 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
           </div>
         )}
 
-        {/* Breadcrumb Navigation */}
-        {activeSection && (
-          <div className="hidden md:block px-2 py-2 border-t border-gray-200 dark:border-gray-700">
-            <Breadcrumb items={getBreadcrumbItems()} />
-          </div>
-        )}
       </div>
     </nav>
   );
