@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { useActiveSection } from '@/hooks/useActiveSection';
 import { cn } from '@/utils/cn';
 import type { NavigationProps } from '@/types/portfolio';
 
@@ -19,10 +21,11 @@ const defaultSections = [
 
 export function Navigation({ sections = defaultSections }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   const scrollToSection = (href: string) => {
     setIsMobileMenuOpen(false);
-    
+
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
@@ -37,6 +40,21 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
         behavior: 'smooth'
       });
     }
+  };
+
+  const getBreadcrumbItems = () => {
+    if (!activeSection) return [];
+
+    const currentSection = sections.find(section => section.id === activeSection);
+    if (!currentSection) return [];
+
+    return [
+      {
+        label: currentSection.label.replace(/[^\w\s]/gi, '').trim(), // Remove emojis
+        href: currentSection.href,
+        current: true
+      }
+    ];
   };
 
   return (
@@ -119,6 +137,13 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Breadcrumb Navigation */}
+        {activeSection && (
+          <div className="hidden md:block px-2 py-2 border-t border-gray-200 dark:border-gray-700">
+            <Breadcrumb items={getBreadcrumbItems()} />
           </div>
         )}
       </div>
