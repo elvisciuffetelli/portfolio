@@ -21,13 +21,15 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
         <div className="space-y-8">
           {/* Profile Picture */}
           <div className="flex justify-center">
-            <div className="w-32 h-32 relative">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 relative">
               <Image
                 src="/profilepic.jpg"
                 alt="Elvis Ciuffetelli - Frontend Developer, professional headshot"
                 fill
                 className="object-cover rounded-full border-4 border-white dark:border-gray-700 shadow-2xl ring-4 ring-blue-100 dark:ring-blue-900"
                 priority
+                sizes="(max-width: 640px) 96px, 128px"
+                quality={85}
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-purple-400/20"></div>
             </div>
@@ -35,7 +37,13 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
 
           {/* Name and Role */}
           <div className="space-y-6">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-gray-100 animate-fade-in">
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-gray-100 animate-fade-in"
+              style={{
+                fontSize: 'clamp(3rem, 8vw, 4.5rem)',
+                lineHeight: '1'
+              }}
+            >
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient-x">
                 {name}
               </span>
