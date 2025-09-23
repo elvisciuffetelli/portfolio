@@ -47,11 +47,12 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
           <button
             onClick={() => scrollToSection('#')}
             className={cn(
-              'text-xl font-bold',
+              'text-lg sm:text-xl font-bold whitespace-nowrap',
               'text-gray-900 dark:text-gray-100',
               'hover:text-blue-600 dark:hover:text-blue-400',
               'transition-colors cursor-pointer',
-              'font-mono tracking-wide'
+              'font-mono tracking-wide',
+              'flex-shrink-0'
             )}
           >
             &lt;EC /&gt;
