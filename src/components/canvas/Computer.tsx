@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 
 import CanvasLoader from "./Loader";
 
@@ -12,6 +12,20 @@ interface ComputersProps {
 const Computers = ({ isMobile }: ComputersProps) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+  // Hard-coded optimized values (Leva controls commented out)
+  const hemisphereIntensity = 6;
+  const spotLightPosition: [number, number, number] = [-20, 50, 10];
+  const spotLightAngle = 0.12;
+  const spotLightPenumbra = 1;
+  const spotLightIntensity = 2;
+  const pointLightIntensity = 1.5;
+  const pointLightPosition: [number, number, number] = [0, 2, 0];
+  const modelScale = isMobile ? 0.80 : 0.90;
+  const modelPosition: [number, number, number] = [0, -1.8, -1.5];
+  const modelRotation: [number, number, number] = [-0.01, -0.2, -0.1];
+
+  /*
+  // Leva controls (commented out for production)
   const {
     // Lighting controls
     hemisphereIntensity,
@@ -25,7 +39,7 @@ const Computers = ({ isMobile }: ComputersProps) => {
     modelScale,
     modelPosition,
     modelRotation,
-  } = useControls(process.env.NODE_ENV !== 'production' && process.env.VERCEL_ENV !== 'production' ? {
+  } = useControls({
     // Lighting
     hemisphereIntensity: { value: 6, min: 0, max: 10, step: 0.01 },
     spotLightPosition: { value: [-20, 50, 10], step: 1 },
@@ -46,18 +60,8 @@ const Computers = ({ isMobile }: ComputersProps) => {
       step: 0.1
     },
     modelRotation: { value: [-0.01, -0.2, -0.1], step: 0.01 },
-  } : {
-    hemisphereIntensity: 6,
-    spotLightPosition: [-20, 50, 10],
-    spotLightAngle: 0.12,
-    spotLightPenumbra: 1,
-    spotLightIntensity: 2,
-    pointLightIntensity: 1.5,
-    pointLightPosition: [0, 2, 0],
-    modelScale: isMobile ? 0.80 : 0.90,
-    modelPosition: [0, -1.8, -1.5],
-    modelRotation: [-0.01, -0.2, -0.1],
   });
+  */
 
   return (
     <mesh>
