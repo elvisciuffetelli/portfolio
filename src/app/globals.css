@@ -466,3 +466,34 @@
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Timeline component customizations */
+.vertical-timeline::before {
+  background: #000000 !important;
+  width: 2px !important;
+}
+
+.dark .vertical-timeline::before {
+  background: #ffffff !important;
+}
+
+.vertical-timeline-element-date {
+  color: hsl(var(--muted-foreground)) !important;
+  font-weight: 500;
+}
+
+.vertical-timeline-element-content {
+  transition: all 0.2s ease-in-out;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 1170px) {
+  .vertical-timeline-element-date {
+    color: hsl(var(--muted-foreground)) !important;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+}

@@ -1,8 +1,8 @@
 'use client';
 
 import { ContactButton } from '@/components/ui/ContactButton';
-import Image from 'next/image';
 import type { HeroSectionProps } from '@/types/portfolio';
+import ComputerCanvas  from "../canvas/Computer";
 
 export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
     return (
@@ -19,21 +19,7 @@ export function HeroSection({ name, role, tagline, links }: HeroSectionProps) {
 
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 <div className="space-y-8">
-                    {/* Profile Picture */}
-                    <div className="flex justify-center">
-                        <div className="w-24 h-24 sm:w-32 sm:h-32 relative">
-                            <Image
-                                src="/profilepic.jpg"
-                                alt="Elvis Ciuffetelli - Frontend Developer, professional headshot"
-                                fill
-                                className="object-cover rounded-full border-4 border-white dark:border-gray-700 shadow-2xl ring-4 ring-blue-100 dark:ring-blue-900"
-                                priority
-                                sizes="(max-width: 640px) 96px, 128px"
-                                quality={85}
-                            />
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-purple-400/20"></div>
-                        </div>
-                    </div>
+                    <ComputerCanvas />
 
                     {/* Name and Role */}
                     <div className="space-y-6">

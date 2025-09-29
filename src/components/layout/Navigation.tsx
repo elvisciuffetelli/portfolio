@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { cn } from '@/utils/cn';
+import Image from 'next/image';
 import type { NavigationProps } from '@/types/portfolio';
 
 const defaultSections = [
@@ -48,21 +49,25 @@ export function Navigation({ sections = defaultSections }: NavigationProps) {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo/Home */}
+          {/* Profile Avatar */}
           <button
             onClick={() => scrollToSection('#')}
             className={cn(
-              'text-lg sm:text-xl font-bold whitespace-nowrap',
-              'text-gray-900 dark:text-gray-100',
-              'hover:text-blue-600 dark:hover:text-blue-400',
-              'transition-colors cursor-pointer',
-              'font-mono tracking-wide',
               'flex-shrink-0',
-              'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-1'
+              'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full'
             )}
             aria-label="Go to top of page - Elvis Ciuffetelli Portfolio"
           >
-            &lt;EC /&gt;
+            <div className="w-10 h-10 relative">
+              <Image
+                src="/profilepic.jpg"
+                alt="Elvis Ciuffetelli"
+                fill
+                className="object-cover rounded-full border-2 border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
+                sizes="40px"
+                quality={85}
+              />
+            </div>
           </button>
 
           {/* Desktop Navigation */}
