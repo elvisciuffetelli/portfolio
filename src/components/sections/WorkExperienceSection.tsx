@@ -3,7 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-// @ts-expect-error: This CSS import is not typed, but required for timeline styling
 import 'react-vertical-timeline-component/style.min.css';
 import { Section } from '@/components/layout/Section';
 import { sortWorkExperienceByDate, formatDateRange } from '@/utils/data';
