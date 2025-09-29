@@ -25,7 +25,7 @@ const Computers = ({ isMobile }: ComputersProps) => {
     modelScale,
     modelPosition,
     modelRotation,
-  } = useControls(process.env.NODE_ENV === 'development' ? {
+  } = useControls(process.env.NODE_ENV !== 'production' && process.env.VERCEL_ENV !== 'production' ? {
     // Lighting
     hemisphereIntensity: { value: 6, min: 0, max: 10, step: 0.01 },
     spotLightPosition: { value: [-20, 50, 10], step: 1 },
